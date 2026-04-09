@@ -35,6 +35,28 @@ const FoodDetailPage = async ({ params }) => {
                 height={200}
                 className="object-cover"
             />
+
+            <h2 className='text-2xl mt-5 mb-2'>Ingredients: </h2>
+            <ul className='list-disc'>
+                {
+                    main_ingredients.map((ingredient, index) => <li key={index}>{ingredient}</li>)
+                }
+            </ul>
+
+
+            <h2 className="text-2xl mt-5 mb-2">Nutrition:</h2>
+
+            <ul className="list-disc ml-5">
+                {Object.entries(approximate_nutrition_per_serving).map(
+                    ([key, value], index) => (
+                        <li key={index}>
+                            {key}: {value}
+                        </li>
+                    )
+                )}
+            </ul>
+
+            
         </div>
     );
 };
