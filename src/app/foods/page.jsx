@@ -10,8 +10,8 @@ const FoodsPage = async () => {
     console.log(foods, "foods data");
 
     return (
-        <div className='max-w-10/12 mx-auto'>
-            <h2>Foods: {foods.length}</h2>
+        <div>
+            <h2 className='text-5xl text-center my-5 font-bold'>Foods: {foods.length}</h2>
 
             <div className='grid grid-cols-3 gap-4'>
                 {
